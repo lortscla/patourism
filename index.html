@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Central PA Tourism</title>  
-         <h1> Explore <br> Central PA </h1>
 
     <style>
       * {
@@ -15,14 +14,13 @@
 
       body {
         background: #ffffff; 
-        display: flex;
-        flex-direction: column-reverse;
+        font-family: Arial, sans-serif;
       }
 
       header {
       background-color: #ffffff; 
       width: 100%;
-      text-align: center;
+      text-align: middle;
       }
 
       #site-header {
@@ -34,22 +32,23 @@
       #content {
         width: 140px;
         margin: 20px;
-        padding: 30px;
-        background: rgb(133, 57, 57);
+        padding: 5px;
+        background: rgb(35, 77, 31);
         border-radius: 10px;
         }
 
       /* Rows */
       .attraction {
         display: flex;
+        flex-direction: column-reverse;
       }
 
       /* box styles */
       .attraction > div {
-        border: 1px solid #21215b;
-        padding: 30px;
-        text-align: center;
-        background: #770562;
+        border: 0.5px solid #000000;
+        padding: 10px;
+        text-align: justify-left;
+        background: #90ba8d;
       }
 
       /* Ind. box widths */
@@ -66,6 +65,7 @@
    <body>
 
      <header>
+      <h1> <b>Explore</b> <br> Central PA </h1>
       <div id="site-header">
       </div>
      </header>
@@ -73,8 +73,9 @@
      <main>
       <div id="content">
         <div class="attraction">
-          <div class="pic-box">
-          <div class="text-box"> this is text about the site</div>
+          <div class="pic-box"> A charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum. </div>
+          <div class="text-box"> 
+            <img src="https://placehold.co/150x150" alt="Lewisburg, PA" width="150" height="150">
           </div>
         </div>
       </div>  
