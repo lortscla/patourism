@@ -7,49 +7,35 @@
      <title>Central PA Tourism</title>  
 
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
 
-      body {
+      
+      header {
+      background-color: #ffffff; 
+      width: 1440px;
+      height: 300px;
+      text-align: center;
+      background-image: url('cover-top-pic.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+      
+        body {
         background: #ffffff; 
         font-family: Arial, sans-serif;
       }
 
-      header {
-      background-color: #ffffff; 
-      width: 100%;
-      text-align: middle;
-      }
-
-      #site-header {
-        width: 1440px;
-        background-image: image("cover-top-pic.webp");
-        background-position: center;
-        margin:0;
-        padding:0px;
-        }
-      
-      #accross-boxes {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 20px;
-      }
       /*this is parent to attractions  */
-      .content {
+      #content {
         display: flex;
-        width: 170px;
-        margin: 20px;
+        gap: 100px;
         padding: 5px;
-        background: rgb(219, 102, 200);
         }
 
       /* the boxes for each attraction which includes a pic and text */
       .attraction {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        gap:0;
       }
 
       /* box styles */
@@ -63,13 +49,13 @@
       /* box styles (text and pic separately) within the attraction box */
       .pic-box {
         flex:1;
-        width: 150px;
+        width: 350px;
       }
       
       .text-box {
-        flex: 1;
-        width: 150px;
+        width: 350px;
       }
+
     </style>
 
    </head>
@@ -77,42 +63,43 @@
 
      <header>
       <h1> <b>Explore</b> <br> Central PA </h1>
+      <h2> The Keystone to Your Adventure Starts Here!</h2>
       <div id="site-header">
       </div>
      </header>
 
      <main>
-      <div id="across-boxes">
-        <div class="content">
+      
+        <div id="content">
 
           <!--lewisburg-->
          <div class="attraction">
           <div class="pic-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+          <div class="text-box"> 
             <p>
              <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
              <br> charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum. </div>
             </p>
-            <div class="text-box"> 
-            <img src="https://placehold.co/150x150" alt="Lewisburg, PA" width="150" height="150">
-           </div>
-          </div> 
+         </div> 
 
           <!--worlds end state park-->
          <div class="attraction">
-          <div class="pic-box"> 
+           <div class="text-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+           <div class="pic-box"> 
             <p>
              <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
              <br> Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.  </div>
             </p>
-            <div class="text-box"> 
-            <img src="https://placehold.co/150x150" alt="Lewisburg, PA" width="150" height="150">
-           </div>
-          </div> 
+         </div> 
 
         </div>
-      </div>  
+      
      </main>
    
     </body>
-   </head>
+
   </html>
