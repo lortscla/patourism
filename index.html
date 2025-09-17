@@ -8,12 +8,26 @@
 
     <style>
 
-      
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        color: #063c16;
+        font-family: 'Helvetica', sans-serif;
+        padding-top: 70px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #842088;
+        font-family: 'Helvetica', sans-serif;
+      }      
+
       header {
       background-color: #ffffff; 
       text-align: center;
-      margin-bottom:30px;
       height: 350px;
+      margin-bottom: -40px;;
       background-color: blanchedalmond;
       /*background-image: url ("cover-top-pic.webp");*/
       background-repeat: no-repeat;
@@ -25,19 +39,28 @@
         font-family: Arial, sans-serif;
       }
 
-      /*this is parent to attractions  */
-      #content {
+
+      #all-attractions {
+        padding: 10px;
         display: flex;
-        gap: 100px;
-        padding: 5px;
-        }
+        flex-direction: column;
+      }
 
       /* the boxes for each attraction which includes a pic and text */
       .attraction {
         display: flex;
         flex-direction: column;
         gap:0;
+        padding-top: 150px;
       }
+      
+      /*this is parent to attractions  */
+      #content {
+        display: flex;
+        gap: 100px;
+        padding: 40px;
+        padding-bottom: 100px;;
+        }
 
       /* box styles */
       .attraction > div {
@@ -64,13 +87,15 @@
 
      <header>
       <h1> <b>Explore</b> <br> Central PA </h1>
-      <h2> <br>The Keystone to Your Adventure Starts Here!</h2>
       <div id="site-header">
       </div>
      </header>
 
      <main>
-      
+
+      <div id="all-attractions">
+
+        <h2> <br>The Keystone to Your Adventure Starts Here!</h2>
         <div id="content">
 
           <!--lewisburg-->
@@ -97,8 +122,88 @@
             </p>
          </div> 
 
+             <!--lewisburg-->
+         <div class="attraction">
+          <div class="pic-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+          <div class="text-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum. </div>
+            </p>
+         </div> 
+
+          <!--worlds end state park-->
+         <div class="attraction">
+           <div class="text-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+           <div class="pic-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.  </div>
+            </p>
+         </div> 
+
         </div>
-      
+
+         <div id="content">
+
+          <!--lewisburg-->
+         <div class="attraction">
+          <div class="pic-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+          <div class="text-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum. </div>
+            </p>
+         </div> 
+
+          <!--worlds end state park-->
+         <div class="attraction">
+           <div class="text-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+           <div class="pic-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.  </div>
+            </p>
+         </div> 
+
+          <!--lewisburg-->
+         <div class="attraction">
+          <div class="pic-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+          <div class="text-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> charming small town known for its historic downtown, offering boutique shops, galleries, and restaurants, as well as attractions like the Lewisburg Farmers Market and Packwood House Museum. </div>
+            </p>
+         </div> 
+
+          <!--worlds end state park-->
+         <div class="attraction">
+           <div class="text-box"> 
+            <img src="https://placehold.co/350x350" alt="Lewisburg, PA" width="350" height="350">
+           </div>
+           <div class="pic-box"> 
+            <p>
+             <a href="https://www.google.com/maps/place/Lewisburg,+PA+17837/@40.9632457,-76.9134811,14z/data=!3m1!4b1!4m6!3m5!1s0x89cf13b7ad9ee00d:0xfd36a4d31f76a418!8m2!3d40.9645293!4d-76.8844101!16zL20vMF9kd3o!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDkxNC4wIKXMDSoASAFQAw%3D%3D"> Lewisburg, PA</a> 
+             <br> Situated in the Endless Mountains, this park is known for its rugged beauty, with hiking trails, waterfalls, and breathtaking views of the Loyalsock Creek Gorge.  </div>
+            </p>
+         </div> 
+
+        </div>
+
+      </div>
+
+      </div>
+
      </main>
    
     </body>
