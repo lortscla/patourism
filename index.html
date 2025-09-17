@@ -8,6 +8,29 @@
 
     <style>
 
+      #primary-nav {
+        background-color: #a94173; 
+      }
+
+      nav ul {
+        list-style-type: none; 
+        padding: 20px;
+        display: flex;
+        justify-content: center; 
+        gap: 40px
+      }
+
+      nav ul li {
+        margin: 15px; 
+      }
+
+      nav ul li a {
+        color: white; 
+        text-decoration: none;
+        font-size: 30px;
+        font-family: 'Helvetica', sans-serif;
+      }
+
       h1 {
         text-align: center;
         font-size: 50px;
@@ -19,23 +42,30 @@
       h2 {
         text-align: center;
         font-size: 30px;
-        color: #842088;
+        color: #a6ff9b;
         font-family: 'Helvetica', sans-serif;
       }      
 
       header {
-      background-color: #ffffff; 
-      text-align: center;
-      height: 500px;
-      width: 1900px;
-      margin-bottom: -40px;
-      margin-top: -30px;
-      background-color: rgb(170, 209, 251);
-      /*background-image: url ("cover-top-pic.webp");*/
-      background-repeat: no-repeat;
-      background-size:cover;
+        text-align: center;
+        height: 500px;
+        width: 1900px;
+        margin:-40px;
+        background-color: rgb(170, 209, 251); /*this will be the hero picture*/
+        background-repeat: no-repeat;
+        background-size:cover;
       }
       
+      .heading-box {
+        height:500px;
+      }
+
+      .subheading-box {
+        height:90px;
+        padding-top: 5px;
+        background-color: #3eadc1;
+      }
+
       body {
         background: #ffffff; 
         font-family: Arial, sans-serif;
@@ -87,8 +117,8 @@
         width: 100%;
         height: auto;
         display: block;
-      }
-      
+        }
+
       .text-box {
         width: 330px;
         height: 150px;
@@ -124,10 +154,19 @@
    </head>
    <body>
 
+     <nav id="primary-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </nav>
+
      <header>
-      <h1> <b>Explore</b> <br> Central PA </h1>
-      <h2>The Keystone to Your Adventure Starts Here!</h2>
-      <div id="site-header">
+      <div id="site-header"></div>
+        <div class="heading-box"> <h1> <b>Explore</b> <br> Central PA </h1> </div>
+        <div class="subheading-box"> <h2>The Keystone to Your Adventure Starts Here!</h2> </div>
       </div>
      </header>
 
