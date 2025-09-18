@@ -145,39 +145,47 @@
         background-color: #4441a9; 
         color: white; /*text color*/
         padding: 20px;
-        width: 1900px;
+        width: 1540px;
         text-align: center;
         margin-top: 100px; 
+        display: flex;
+        flex-direction: row;
       }
 
-     .footer-left {
+      .footer-left {
+        flex:1;
         text-align: left;
-        flex: 1;
       }
 
       .footer-center {
-        text-align: center;
-        flex: 1;
+        flex:1;
       }
 
       .footer-right {
-        text-align: right;
-        flex: 1;
+        flex:1;
+        text-align: right; 
       }
 
     </style>
 
    </head>
    <body>
-
-     <nav id="primary-nav">
+      <div class="footer-left">
+            <img src="images/logo-bottom.webp" alt="logo">
+      </div>
+      <div class="footer-center">
+       <nav id="primary-nav">
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="attractions.html">Attractions</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-     </nav>
+       </nav>
+      </div>
+        <div class="footer-right">
+          Hamburger
+      </div>
 
      <header>
       <div id="site-header"></div>
@@ -301,10 +309,15 @@
       </div>
 
       <footer>
-        <p>&copy; 2025 Central PA Tourism</p>
-        <div class="footer-left">© 2025 Central PA Tourism</div>
-        <div class="footer-center">more text</div>
-        <div class="footer-right">Contact: info@cpt.com</div>
+        <div class="footer-left">
+            <img src="images/logo-bottom.webp" alt="logo">
+        </div>
+        <div class="footer-center">
+           Central PA Tourism <br> 100 Central PA Way <br> Somewhere in CPA<br><br>© 2025 Central PA Tourism 2025
+        </div>
+        <div class="footer-right">
+          Contact: info@cpt.com
+        </div>
       </footer>
      
 </main>
