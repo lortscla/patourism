@@ -11,6 +11,7 @@
       #primary-nav {
         background-color: #a94173; 
         margin: -20px;
+        width: 1600px;
       }
 
       nav ul {
@@ -28,7 +29,7 @@
       nav ul li a {
         color: white; 
         text-decoration: none;
-        font-size: 20px;
+        font-size: 25px;
         font-family: 'Helvetica', sans-serif;
       }
 
@@ -51,7 +52,8 @@
       header {
         text-align: center;
         height: 500px;
-        width: 1500px;
+        width: 1620px;
+        padding: -10px;
         margin:-40px;
         background-color: rgb(170, 209, 251); /*this will be the hero picture*/
         background-repeat: no-repeat;
@@ -74,27 +76,24 @@
       }
 
       #all-attractions {
-        padding: 10px;
         display: flex;
         flex-direction: column;
       }
+
+      /*this is parent to attractions  */
+      #content {
+        display: flex;
+        gap: 50px;
+        padding: 10px;
+        padding-top: 200px;
+        }
 
       /* the boxes for each attraction which includes a pic and text */
       .attraction {
         display: flex;
         flex-direction: column;
         gap:0;
-        padding-top: 150px;
       }
-      
-      /*this is parent to attractions  */
-      #content {
-        display: flex;
-        gap: 100px;
-        padding: 40px;
-        padding-bottom: 20px;
-        padding-top: 150px;
-        }
 
       /* box styles */
       .attraction > div {
