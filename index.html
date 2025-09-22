@@ -14,6 +14,13 @@
 
     <style>
 
+      body {
+        background: #ffffff; 
+        margin: 0;
+        padding:0;
+        font-family: 'Helvetica', sans-serif;
+      }
+
       .entire-page-container {
         max-width: 1600px;
         margin: 0 auto; 
@@ -21,12 +28,11 @@
 
       #top-bar {
         background-color: #D7DFEA; 
-        width: 100%;
+        display: flex;
         height:100px;
         align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
       }
 
       #primary-nav { 
@@ -51,18 +57,14 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 25px;
-        font-family: 'Helvetica', sans-serif;
       }
 
       h1 {
         text-align: center;
         font-size: 100px;
         color: #254E29;
-        font-family: 'Helvetica', sans-serif;
-        padding-top: 60px;
-        margin-top: 40px;
         margin: 0;
-        padding: 0;
+        padding-top: 20px;
       }
 
       h2 {
@@ -71,7 +73,7 @@
         color: #254E29;
         font-family: 'Helvetica', sans-serif;
         margin: 0;
-        padding: 0;
+        padding-top: 20px;
       }      
 
       header {
@@ -97,33 +99,28 @@
         border-radius: 0 0 10px 10px; /* Top-left, Top-right, Bottom-right, Bottom-left */
       }
 
-      body {
-        background: #ffffff; 
-        margin: 0;
-        padding:0;
-      }
-
       #all-attractions {
         display: flex;
         flex-direction: column;
-        padding-top: 150px;
+        padding-top: 100px;
         width: 100%;
+        align-items: center;
+        box-sizing: border-box;
       }
 
       /*this is parent to attractions  */
       #content {
         display: flex;
         gap: 50px;
-        padding: 10px;
         margin-top: 20px;
         }
 
       .content-headings {
         font-size: 40px;
         color: #254E29;
-        font-family: 'Helvetica', sans-serif;
         text-align: left;
         padding-left: 20px;
+        padding-top: 50px;
         margin-bottom: 20px;
       }
 
@@ -137,7 +134,6 @@
       /* box styles */
       .attraction > div {
         padding: 10px;
-        text-align: justify-left;
       }
 
       /* box styles (text and pic separately) within the attraction box */
@@ -158,7 +154,6 @@
         text-align: center; 
         display: flex;
         align-items: flex-start;
-        font-family: 'Helvetica', sans-serif;
         font-size: 30px;
         font-weight: bold;
         padding: 20px;
@@ -186,7 +181,6 @@
 
       p {
         font-size: 18px;
-        font-family: 'Helvetica', sans-serif;
         color: #000000;
         line-height: 1.2;
         margin: 0px;
@@ -270,7 +264,9 @@
               <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/PineGroveFurnaceStatePark/Pages/default.aspx"> 
                 Pine Grove Furnace State Park </a>
             </p>
-            <img src="images/furnace.webp" alt="Iron Furnace" width="350" height="350">
+              <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/PineGroveFurnaceStatePark/Pages/default.aspx">
+                <img src="images/furnace.webp" alt="Iron Furnace" width="350" height="350">
+              </a>
            </div>
           <div class="text-box"> 
             <p>
@@ -288,7 +284,9 @@
               <a href="https://www.nab.usace.army.mil/Missions/Dams-Recreation/Raystown/"> 
                 Raystown Lake </a>
             </p>
+            <a href="https://www.nab.usace.army.mil/Missions/Dams-Recreation/Raystown/"> 
             <img src="images/raystown.webp" alt="Raystown" width="350" height="350">
+            </a>
            </div>
           <div class="text-box"> 
             <p>
@@ -306,7 +304,9 @@
               <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/ColtonPointStatePark"> 
                 Pennsylvania <br>Grand Canyon </a>
             </p>
+            <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/ColtonPointStatePark"> 
             <img src="images/pa-grand-canyon.webp" alt="PA Grand Canyon" width="350" height="350">
+            </a>
            </div>
           <div class="text-box"> 
             <p>
@@ -324,7 +324,9 @@
               <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/WorldsEndStatePark "> 
                 Worlds End <br> State Park </a>
             </p>
+            <a href="https://www.dcnr.pa.gov/StateParks/FindAPark/WorldsEndStatePark "> 
             <img src="images/worlds-end.webp" alt="Worlds End" width="350" height="350">
+            </a>
            </div>
           <div class="text-box"> 
             <p>
@@ -348,7 +350,9 @@
               <a href="https://www.nps.gov/gett"> 
                 Gettysburg National <br> Military Park </a>
             </p>
+            <a href="https://www.nps.gov/gett"> 
             <img src="images/gettysburg.webp" alt="Gettysburg" width="350" height="350">
+            </a>
            </div>
           <div class="text-box"> 
             <p>
@@ -366,7 +370,9 @@
               <a href=" https://www.pacapitol.com "> 
                 Pennsylvania <br> State Capitol </a>
             </p>
+            <a href=" https://www.pacapitol.com "> 
             <img src="images/pastatecapitol.webp" alt="PA State Capitol" width="350" height="350">
+            </a>
            </div>
           <div class="text-box"> 
             <p>
