@@ -356,13 +356,13 @@
           <button id="toggle-nav-btn">&#9776;<!-- hamburger icon/symbol insted of image -->
           </button>
           <nav id="mobile-nav">
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="attractions.html">Attractions</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="attractions.html">Attractions</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
       </div>
      
      </div>
@@ -552,6 +552,7 @@
        </div>
 
       <footer>
+
         <div class="footer-left">
             <img src="images/logo-bottom.webp" alt="logo">
         </div>
@@ -572,6 +573,7 @@
             </a>
           </div>
         </div>
+
       </footer>
      
      </main>
@@ -581,14 +583,15 @@
     <script>
 
        window.onload = () => {
-  const toggleNavBtn = document.getElementById('toggle-nav-btn');
-  const mobileNav = document.getElementById('mobile-nav');
+        const toggleNavBtn = document.getElementById('toggle-nav-btn');
+        const mobileNav = document.getElementById('mobile-nav');
 
-  toggleNavBtn.addEventListener('click', () => {
-    mobileNav.classList.toggle('show'); // toggle visibility
-    toggleNavBtn.innerHTML = mobileNav.classList.contains('show') ? '&#10005;' : '&#9776;'; // X / hamburger
-  });
-};
+      toggleNavBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('show'); // toggle visibility
+        toggleNavBtn.innerHTML = mobileNav.classList.contains('show') ? '&#10005;' : '&#9776;'; // X / hamburger
+        });
+        
+      };
       
     </script></Code>
 
