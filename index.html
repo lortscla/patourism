@@ -14,6 +14,13 @@
 
     <style>
 
+      :root {
+        --block-bg-color: #D7DFEA;
+        --main-text-color: #254E29;
+        --black-text-color: #000;
+        --hover-color: #538535;
+      }
+
       body {
         background: #ffffff; 
         margin: 0;
@@ -27,7 +34,7 @@
       }
 
       #top-bar {
-        background-color: #D7DFEA; 
+        background-color: var(--block-bg-color); 
         display: flex;
         height:100px;
         align-items: center;
@@ -53,14 +60,14 @@
       }
 
       nav ul li a {
-        color: #254E29; 
+        color: var(--main-text-color); 
         text-decoration: none;
         font-weight: bold;
         font-size: 25px;
       }
 
-      a:hover, h4:hover {
-        color: #07260c;   
+      a:hover {
+        color: var(--hover-color);   
         }  
 
       .header-right {
@@ -71,14 +78,14 @@
 
       .hamburger { /*drop down requires javascript*/
       padding: 16px;
-      background-color: #D7DFEA;
+      background-color: var(--block-bg-color);
       border: none;
       }
 
       h1 {
         text-align: center;
         font-size: 100px;
-        color: #254E29;
+        color: var(--main-text-color); 
         margin: 0;
         padding-top: 20px;
       }
@@ -86,7 +93,7 @@
       h2 {
         text-align: center;
         font-size: 30px;
-        color: #254E29;
+        color: var(--main-text-color); 
         font-family: 'Helvetica', sans-serif;
         margin: 0;
         padding-top: 20px;
@@ -111,7 +118,7 @@
       .subheading-box {
         height:90px;
         padding-top: 5px;
-        background-color: #D7DFEA;
+        background-color: var(--block-bg-color);
         border-radius: 0 0 10px 10px; /* Top-left, Top-right, Bottom-right, Bottom-left */
       }
 
@@ -133,7 +140,7 @@
 
       .content-headings {
         font-size: 40px;
-        color: #254E29;
+        color: var(--main-text-color); 
         text-align: left;
         padding-left: 20px;
         padding-top: 50px;
@@ -156,7 +163,7 @@
       .pic-box {
         width: 350px;
         height: 450px;       
-        background: #D7DFEA; 
+        background-color: var(--block-bg-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-end; /* push image to bottom */
@@ -165,8 +172,7 @@
         border-radius: 10px 10px 0 0; /* Top-left, Top-right, Bottom-right, Bottom-left */
       }
 
-        .pic-box h4 {
-        color: #254E29;
+        .pic-box h4 { 
         text-align: center; 
         display: flex;
         align-items: flex-start;
@@ -175,6 +181,14 @@
         font-weight: bold;
         min-height: 70px;
         justify-content: center;
+      }
+
+      .pic-box a{
+      color: var(--main-text-color);
+      }
+     
+      .pic-box a:hover{
+        color: var(--hover-color); 
       }
 
       .pic-box img {
@@ -186,24 +200,31 @@
       .text-box {
         width: 330px;
         height: 155px;
-        background: #D7DFEA;
+        background-color: var(--block-bg-color);
         border-radius: 0 0 10px 10px; /* Top-left, Top-right, Bottom-right, Bottom-left */
+      }
+
+      .text-box a {
+        color: var(--black-text-color);
+      }
+
+      .text-box a:hover {
+        color: var(--hover-color); 
       }
 
       a {
         text-decoration: none;
-        color: #254E29;
       }
 
       p {
         font-size: 18px;
-        color: #000000;
+        color: var(--black-text-color);
         line-height: 1.2;
         margin: 0px;
       }
 
       footer {
-        background-color: #D7DFEA; 
+        background-color: var(--block-bg-color);
         color: rgb(0, 0, 0); 
         width: 100%;
         margin: 0;
@@ -219,18 +240,34 @@
       .footer-left {
         flex:1;
         text-align: left;
-        padding-left: 20px;
+        padding: 5px 20px 0 10px;
       }
 
       .footer-center {
         flex:1;
-        padding:20px;
+        padding:10px;
       }
 
       .footer-right {
         flex:1;
         text-align: right; 
-        padding-right: 20px;
+        flex-direction: column;
+        padding: 10px 20px 0 0;
+        }
+
+      .footer-right a {
+        color: var(--black-text-color);
+      }  
+
+      .footer-right a:hover {
+        color: var(--hover-color); 
+      }
+
+      .sm-icons {
+        padding: 20px 0 20px 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
       }
 
     </style>
@@ -455,9 +492,18 @@
            Central PA Tourism <br> 100 Central PA Way <br> Somewhere in CPA<br><br>© 2025 Central PA Tourism 2025
         </div>
         <div class="footer-right">
-          <a href="mailto: info@cpt.com"> 
-          Contact: info@cpt.com
-          </a>
+          <div> <a href="mailto: info@cpt.com"> 
+            Contact: info@cpt.com
+            </a>
+          </div>
+          <div class="sm-icons">
+            <a href="https://www.facebook.com "> 
+              <img src="images/fb.webp" alt="FB" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com "> 
+              <img src="images/ig.webp" alt="IG" width="40" height="40">
+            </a>
+          </div>
         </div>
       </footer>
      
