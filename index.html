@@ -78,8 +78,6 @@
         z-index: 1000; /*this makes it above other stuff*/
         }
 
-      
-
       h1 {
         text-align: center;
         font-size: 100px;
@@ -268,85 +266,67 @@
         justify-content: flex-end;
       }
 
-      
-      
       .inner {overflow: hidden;
       }
 
-   
-  
-    
-    #primary-nav li {
+     #primary-nav li {
       display: block;
-    }
+     }
    
-    
     .inner {
       overflow: hidden;
     }
 
-   #toggle-nav-btn {
-  font-size: 50px;   
-  color: var(--main-text-color);
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: block;
-}
-  
-   #mobile-nav ul {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  padding: 0;
-  margin: 0;
-  gap: 0;
+    #toggle-nav-btn {
+     font-size: 50px;   
+     color: var(--main-text-color);
+     background: none;
+     border: none;
+     cursor: pointer;
+     display: block;
    }
+  
+    #mobile-nav ul {
+     display: flex;
+     flex-direction: column; /* stack vertically */
+     padding: 0;
+     margin: 0;
+     gap: 0;
+    }
 
+    #mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;  /* just below button */
+      right: 0;
+      width: 200px; /* or 100% if you want full width */
+      background: var(--block-bg-color);
+      border-radius: 0 0 10px 10px;
+      box-sizing: border-box;
+      padding: 10px 0;
+      z-index: 999;    
+    }
 
-#mobile-nav {
-  display: none;
-  position: absolute;
-  top: 100%;  /* just below button */
-  right: 0;
-  width: 200px; /* or 100% if you want full width */
-  background: var(--block-bg-color);
-  border-radius: 0 0 10px 10px;
-  box-sizing: border-box;
-  padding: 10px 0;
-  z-index: 999;    
-}
+    #mobile-nav.show {
+      display: block;
+    }
 
-#mobile-nav.show {
-  display: block;
-}
+    #mobile-nav li {
+      padding: 10px 20px;
+      text-align: center;
+    }
 
-#mobile-nav li {
-  padding: 10px 20px;
-  text-align: center;
-}
+    #mobile-nav a {
+      color: var(--main-text-color);
+      text-decoration: none;
+      font-size: 20px;
+    }
 
-#mobile-nav a {
-  color: var(--main-text-color);
-  text-decoration: none;
-  font-size: 20px;
-}
-
-#mobile-nav a:hover {
-  background-color: var(--hover-color);
-  color: white;
-  border-radius: 5px;
-
-/* Show hamburger only on small screens */
-@media (max-width: 767px) {
-  #primary-nav { display: none; }
-  #toggle-nav-btn { display: block; }
-}
-
-/* Show desktop nav on large screens */
-@media (min-width: 768px) {
-  #mobile-nav { display: none !important; }
-}
-
+    #mobile-nav a:hover {
+      background-color: var(--hover-color);
+      color: white;
+      border-radius: 5px;
+    }
 
     </style>
 
