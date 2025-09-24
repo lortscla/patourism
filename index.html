@@ -72,15 +72,13 @@
 
       .header-right {
         position: relative;
+        padding-left: 400px;
+        flex: 0 0 auto;
         text-align: right;
-        flex: 1;
+        z-index: 1000; /*this makes it above other stuff*/
         }
 
-      .hamburger { /*drop down requires javascript*/
-      padding: 16px;
-      background-color: var(--block-bg-color);
-      border: none;
-      }
+      
 
       h1 {
         text-align: center;
@@ -270,11 +268,91 @@
         justify-content: flex-end;
       }
 
+      
+      
+      .inner {overflow: hidden;
+      }
+
+   
+  
+    
+    #primary-nav li {
+      display: block;
+    }
+   
+    
+    .inner {
+      overflow: hidden;
+    }
+
+   #toggle-nav-btn {
+  font-size: 50px;   
+  color: var(--main-text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+  
+   #mobile-nav ul {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  padding: 0;
+  margin: 0;
+  gap: 0;
+   }
+
+
+#mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;  /* just below button */
+  right: 0;
+  width: 200px; /* or 100% if you want full width */
+  background: var(--block-bg-color);
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  z-index: 999;    
+}
+
+#mobile-nav.show {
+  display: block;
+}
+
+#mobile-nav li {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#mobile-nav a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#mobile-nav a:hover {
+  background-color: var(--hover-color);
+  color: white;
+  border-radius: 5px;
+
+/* Show hamburger only on small screens */
+@media (max-width: 767px) {
+  #primary-nav { display: none; }
+  #toggle-nav-btn { display: block; }
+}
+
+/* Show desktop nav on large screens */
+@media (min-width: 768px) {
+  #mobile-nav { display: none !important; }
+}
+
+
     </style>
 
    </head>
    <body>
-
+    
     <div class="entire-page-container">
 
      <div id="top-bar">
@@ -295,10 +373,21 @@
       </div>
 
       <div class="header-right">
-          <img src="images/hamburger.webp" alt="hamburger">
+          <button id="toggle-nav-btn">&#9776;<!-- hamburger icon/symbol insted of image -->
+          </button>
+          <nav id="mobile-nav">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
       </div>
-
+     
      </div>
+
+
 
      <header>
       <div id="site-header"></div>
@@ -510,6 +599,20 @@
      </main>
 
     </div>
+
+    <script>
+
+       window.onload = () => {
+  const toggleNavBtn = document.getElementById('toggle-nav-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  toggleNavBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('show'); // toggle visibility
+    toggleNavBtn.innerHTML = mobileNav.classList.contains('show') ? '&#10005;' : '&#9776;'; // X / hamburger
+  });
+};
+      
+    </script></Code>
 
     </body>
 
