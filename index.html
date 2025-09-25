@@ -40,6 +40,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        position: relative;
       }
 
       #primary-nav { 
@@ -70,14 +71,6 @@
         color: var(--hover-color);   
         }  
 
-      .header-right {
-        position: relative;
-        padding-left: 400px;
-        flex: 0 0 auto;
-        text-align: right;
-        z-index: 1000; /*this makes it above other stuff*/
-        }
-
       h1 {
         text-align: center;
         font-size: 100px;
@@ -107,6 +100,28 @@
         background-position: center 30%;
       }
       
+      .header-left {
+        flex:1;
+        text-align: left;
+        padding: 5px 20px 0 10px;
+      }
+
+      .header-right {
+        position: relative;
+        padding-left: 400px;
+        flex: 0 0 auto;
+        text-align: right;
+        z-index: 1000; /*this makes it above other stuff*/
+        }
+
+      .header-center {
+        flex:1;
+        position:absolute;
+        left:50%; /*this moves left edge to middle of parent...50% from the left*/
+        transform: translateX(-50%); /*this shifts it back to the left by 50% of its width (always half of parent) when shrinking*/
+        padding:10px;
+      }
+
       .heading-box {
         height:500px;
       }
@@ -168,7 +183,7 @@
         border-radius: 10px 10px 0 0; /* Top-left, Top-right, Bottom-right, Bottom-left */
       }
 
-        .pic-box h4 { 
+      .pic-box h4 { 
         text-align: center; 
         display: flex;
         align-items: flex-start;
@@ -287,7 +302,7 @@
      display: block;
    }
   
-    #mobile-nav ul {
+    .hamburger-nav ul {
      display: flex;
      flex-direction: column; /* stack vertically */
      padding: 0;
@@ -295,7 +310,7 @@
      gap: 0;
     }
 
-    #mobile-nav {
+    .hamburger-nav {
       display: none;
       position: absolute;
       top: 100%;  
@@ -308,23 +323,23 @@
       z-index: 999;    
     }
 
-    #mobile-nav.show {
+    .hamburger-nav.show {
       display: block;
     }
 
-    #mobile-nav li {
+    .hamburger-nav li {
       padding: 10px 20px;
       text-align: center;
     }
 
-    #mobile-nav a {
+    .hamburger-nav a {
       color: var(--main-text-color);
       text-decoration: none;
       font-size: 20px;
     }
 
-    #mobile-nav a:hover 
-    #mobile-nav a:active {
+    .hamburger-nav a:hover, 
+    .hamburger-nav a:active {
       color: var(--hover-color);
       border-radius: 5px;
     }
@@ -338,11 +353,11 @@
 
      <div id="top-bar">
 
-      <div class="footer-left">
+      <div class="header-left">
             <img src="images/logo-bottom.webp" alt="logo">
       </div>
 
-      <div class="footer-center">
+      <div class="header-center">
        <nav id="primary-nav">
         <ul>
           <li><a href="about.html">About</a></li>
@@ -356,7 +371,7 @@
       <div class="header-right">
           <button id="toggle-nav-btn">&#9776;<!-- hamburger icon/symbol insted of image -->
           </button>
-          <nav id="mobile-nav">
+          <nav class="hamburger-nav">
             <ul>
               <li><a href="page-1.html">Page 1</a></li>
               <li><a href="page-2.html">Page 2</a></li>
@@ -584,11 +599,11 @@
 
        window.onload = () => {
         const toggleNavBtn = document.getElementById('toggle-nav-btn');
-        const mobileNav = document.getElementById('mobile-nav');
+        const hamburgerNav = document.querySelector('.hamburger-nav');
 
       toggleNavBtn.addEventListener('click', () => {
-        mobileNav.classList.toggle('show'); // toggle visibility
-        toggleNavBtn.innerHTML = mobileNav.classList.contains('show') ? '&#10005;' : '&#9776;'; // X / hamburger
+        hamburgerNav.classList.toggle('show'); // toggle visibility
+        toggleNavBtn.innerHTML = hamburgerNav.classList.contains('show') ? '&#10005;' : '&#9776;'; // X / hamburger
         });
 
       };
